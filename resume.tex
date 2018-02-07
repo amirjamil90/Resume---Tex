@@ -1,0 +1,115 @@
+
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Mohammad Amir Jamil}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Date of Birth:} &  03-02-1993 \\
+    \textsc{Address:}   & Al-Naseem, Riyadh \\
+    \textsc{Phone:}     & +966-506155619\\
+    \textsc{email:}     & \href{mailto:amirjamil900@gmail.com}{amirjamil900@gmail.com}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{Current} & Project Manager at \textsc{Telecommunications Consultants India Ltd}, Riyadh,Saudi Arabia \\\textsc{October 2017}&\emph{Network Strategies}\\&\footnotesize{Design, Planning and Optimisation of FTTx networks.\newline
+ Analysis for Optical Cost Budgeting for various Projects.\newline
+ Preparation of Cost Estimate for various projects taking Technology Trends, Economic Stagnation as core Parameters. The Projects Include Ministry of Interior Backhaul Network, Saudi Telecom Company Managed Services for Core and Access Network.\newline 
+ Coordination with Government Agencies(Ministry of Interior, Ministry of Transport, Ministry of Communication) for unhindered implementation of FTTx Deployment for clients especially Saudi Telecom Company and Dawiyat.\newline
+ Developing strategies for Network Relocation for Riyadh Metro. Working with Metro Consortium ie ANM, FAST and BACS for Relocation of Network with Optimized Network Plan.
+}\\\multicolumn{2}{c}{} \\
+ \textsc{Oct 2015- Oct 2017} & Project Engineer at \textsc{Telecommunications Consultants India Ltd}, Riyadh ,Saudi Arabia \\&\emph{Network Analyst}\\&\footnotesize{ Certification from Advance Level Telecom Training Center(ALTTC).\newline
+ Developed Broadcast Chat Messenger for Intra-communication using Socket.io.\newline
+Developed single handed Cloud Based Logistics Management System for TCIL in Saudi Arabia ,using Openshift as deployment engine and JAVA with MYSQL cartridge. Use of Poi libraries for excel files and SOLR for fast indexing.\newline
+Controlled the PMCS(Project Management Control System) for TCIL in Saudi Arabia, which involves query optimization and Deviation Analysis and Milestone Completion Features.\newline
+ Worked to formulate Prototype for Online Cab booking facility.... a step in e-commerce.... for 6 provinces Saudi  Arabia.}\\\multicolumn{2}{c}{} \\
+\textsc{Jun 2015 - Oct 2015} & Software Development Engineer at \textsc{Jabong}, \newline \emph{Developer}\\&\footnotesize{Handled the Cancel Order page UI and Front End in Sails.js.Developed services, controller and policies for the feature.\newline
+Implemented the Test Driven Development for the module with Mocha and Chai.\newline
+Optimisation of Jabong Search Suggestion which included POC for individual time break up for the modules. Made use of
+concurrent request tool handler (siege) for latency. Meanwhile developed Locust module to do the same.\newline
+Made a JavaScript Error Logging Module which would log errors of the frontend in chronologic order.\newline
+Developed a Bunyan logger for the Bussiness Logic Layer of Jabong.\newline
+Made a Nightwatch module for automated testing for complete catalogue testing.\newline
+Chief Coordinator of Knowledge Sharing Sessions.Conducted a  session on Algorithmic approaches for real world problems and improving running time complexity for API calls.}
+\end{tabular}
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}
+ \textsc{2011-2015} \footnotesize{  B.Tech Computer Engineering from Jamia Millia Islamia,New-Delhi. 9.08/10 \newline 
+   2010-2011 }
+ \end{tabular}
+\end{document}
