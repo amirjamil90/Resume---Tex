@@ -1,2 +1,4 @@
 # Resume---Tex
-My resume in Latex. Under Development .
+
+
+My resume in Latex.
